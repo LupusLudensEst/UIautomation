@@ -72,7 +72,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url
     // parameter starts with "/", then the base url gets prepended.
-    baseUrl: 'http://deens-master.now.sh',
+    //baseUrl: 'http://deens-master.now.sh',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
