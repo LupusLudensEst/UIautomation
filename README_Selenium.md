@@ -11,6 +11,7 @@ Install Java JDK
 Install Maven
 
 Project: UIautomation/selenium
+
 Tests: UIautomation/selenium/UIautomation-Selenium_LoginTC
 
 Steps:
