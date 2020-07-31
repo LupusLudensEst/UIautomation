@@ -4,13 +4,13 @@ All related Cucumber goes here:
 
 1. Istall steps:
 
-Install NodeJS
+Install NodeJS  https://nodejs.org/en/download/
 
-Install Yarn
+Install Yarn  https://classic.yarnpkg.com/en/docs/install/#windows-stable
 
-Install Java JDK
+Install Java JDK  https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html
 
-Install Visual Studio Code
+Install Visual Studio Code  https://code.visualstudio.com/Download
 
 Install "Cucumber (Gherkin) Full Support" in VS Code Marketplace
 
