@@ -34,3 +34,7 @@ yarn -v
 4. run test case
 
 yarn run wdio
+
+
+Please provide  what need to istall and steps for LINUX(Ubuntu server we use for test)
+
