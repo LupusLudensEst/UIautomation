@@ -2,6 +2,8 @@
 
 All related Selenium goes here:
 
+Please provide links to download, provide command to run to install and add to system variabels etc etc, neew to add screenshots of steps etc
+
 Pre Requirements:
 
 Install Git
