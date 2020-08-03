@@ -5,5 +5,7 @@
 add environment-specific variables on new lines in the form of
 EMAIL='test@email.com'
 PASSWORD='password'
+
+4.1) npm install chromedriver
 5) To start tests run “npm test” command  (please provide a location of test?)
 6) propery of server link located: Features/fixtures/params.js
