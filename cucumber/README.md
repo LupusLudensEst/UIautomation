@@ -4,5 +4,6 @@
 4) Create a .env file in the root directory of your project and
 add environment-specific variables on new lines in the form of
 EMAIL='test@email.com'
+
 PASSWORD='password'
 5) To start tests run “npm test” command
