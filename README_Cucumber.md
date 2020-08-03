@@ -39,6 +39,9 @@ yarn run wdio
 Please provide  what need to istall and steps for LINUX(Ubuntu server we use for test)
 
 Yarn install:
+
+https://webdriver.io/docs/clioptions.html
+
 Debian / Ubuntu
 On Debian or Ubuntu Linux, you can install Yarn via our Debian package repository. You will first need to configure the repository:
 
