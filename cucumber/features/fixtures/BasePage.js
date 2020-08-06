@@ -19,6 +19,8 @@ const firefoxOptions = new firefox.Options();
 if (HEADLESS) {
   chromeOptions.addArguments("headless");
   chromeOptions.addArguments("disable-gpu");
+  chromeOptions.addArguments("no-sandbox");
+  chromeOptions.addArguments("whitelisted-ips 0.0.0.0");
   firefoxOptions.addArguments("headless");
   firefoxOptions.addArguments("disable-gpu");
 }
