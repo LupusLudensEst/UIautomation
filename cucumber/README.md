@@ -7,5 +7,7 @@ EMAIL='test@email.com'
 PASSWORD='password'
 
 4.1) npm install chromedriver
+and chromebrowser !!headless version!!
+configure it in settings for chromedriver!!!
 5) To start tests run “npm test” command  (please provide a location of test?)
 6) propery of server link located: Features/fixtures/params.js
