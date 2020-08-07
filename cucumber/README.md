@@ -14,7 +14,7 @@ Cucumber Framework
     
 - A preinstalled browser driver
     npm install chromedriver
-    read more => (https://www.npmjs.com/package/chromedriver)
+    read more https://www.npmjs.com/package/chromedriver
     
 - A preinstalled browser
   Install chromebrowser(for Linux):
@@ -45,7 +45,7 @@ Cucumber Framework
 
 # Configurations
 
-  To configure your tests, check out the "Features/fixtures/params.js" file in your test directory
+  To configure your tests, check out the "fixtures/params.js" file in your test directory
   
    
 # How to write a test
