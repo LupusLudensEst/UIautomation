@@ -1,6 +1,6 @@
 /* eslint-disable */
 const { Given, When, Then, AfterAll } = require("cucumber");
-import LoginPage from "../pages/LoginPage";
+import LoginPage from "../../pages/LoginPage";
 
 Given("I am on the Login page", async function () {
   await LoginPage.openURL();
