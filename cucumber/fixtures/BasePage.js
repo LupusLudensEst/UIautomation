@@ -2,26 +2,31 @@ import {
   EXPLICIT_TIMEOUT, BaseUrl, BROWSER_TYPE, HEADLESS,
 } from "./params";
 
+const fs = require("fs");
+
 const webdriver = require("selenium-webdriver");
 const { until } = require("selenium-webdriver");
-
 const chrome = require("selenium-webdriver/chrome");
 const firefox = require("selenium-webdriver/firefox");
 
 // set custom wait time between tests
 const { setDefaultTimeout } = require("cucumber");
 
-setDefaultTimeout(60 * 500);
+setDefaultTimeout(60 * 600);
 
 const chromeOptions = new chrome.Options();
 const firefoxOptions = new firefox.Options();
 
 if (HEADLESS) {
   chromeOptions.addArguments("headless");
+  chromeOptions.addArguments("no-sandbox");
+  chromeOptions.addArguments("whitelisted-ips 0.0.0.0");
   chromeOptions.addArguments("disable-gpu");
   chromeOptions.addArguments("no-sandbox");
   chromeOptions.addArguments("whitelisted-ips 0.0.0.0");
   firefoxOptions.addArguments("headless");
+  firefoxOptions.addArguments("no-sandbox");
+  firefoxOptions.addArguments("whitelisted-ips 0.0.0.0");
   firefoxOptions.addArguments("disable-gpu");
 }
 
@@ -85,6 +90,16 @@ export default class BasePage {
       }
     } else {
       throw TypeError(`"action" must be a "string" but got "${typeof action}"`);
+    }
+  }
+
+  async takeScreenShot(name) {
+    try {
+      const screenshot = await this.driver.takeScreenshot();
+      const base64Data = screenshot.replace(/^data:image\/png;base64,/, "");
+      fs.writeFileSync(`./images/${name}.png`, base64Data, "base64");
+    } catch (err) {
+      throw Error(err);
     }
   }
 }

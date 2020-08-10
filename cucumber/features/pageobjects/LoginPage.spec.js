@@ -1,6 +1,6 @@
 /* eslint-disable */
-const { Given, When, Then, AfterAll } = require("cucumber");
-import LoginPage from "../pages/LoginPage";
+const { Given, When, Then, AfterAll, After, Status } = require("cucumber");
+import LoginPage from "../../pages/LoginPage";
 
 Given("I am on the Login page", async function () {
   await LoginPage.openURL();
@@ -81,4 +81,10 @@ Then("The invalidPassword alert is popped up", async function () {
 
 AfterAll("end", function () {
   LoginPage.closeSession();
+});
+
+After(async function (scenario) {
+  if (scenario.result.status === Status.FAILED) {
+    await LoginPage.getScreenshotOfError(scenario.pickle.name);
+  }
 });

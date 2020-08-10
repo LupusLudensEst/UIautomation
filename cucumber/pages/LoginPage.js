@@ -78,10 +78,9 @@ class LoginPage extends BasePage {
     await this.chechDisplayed(LOCATORS.SUBMIT, "click");
   }
 
-  // async clearCookies() {
-  //   await this.driver.manage().deleteAllCookies();
-  //   await this.driver.navigate().refresh();
-  // }
+  async getScreenshotOfError(name) {
+    await this.takeScreenShot(name);
+  }
 }
 
 export default new LoginPage();
