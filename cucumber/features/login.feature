@@ -1,3 +1,4 @@
+@smoke @regression
 Feature: Login
 
     Testing the admin login page functionality

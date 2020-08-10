@@ -2,6 +2,8 @@ import {
   EXPLICIT_TIMEOUT, BaseUrl, BROWSER_TYPE, HEADLESS,
 } from "./params";
 
+const fs = require("fs");
+
 const webdriver = require("selenium-webdriver");
 const { until } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
@@ -88,6 +90,16 @@ export default class BasePage {
       }
     } else {
       throw TypeError(`"action" must be a "string" but got "${typeof action}"`);
+    }
+  }
+
+  async takeScreenShot(name) {
+    try {
+      const screenshot = await this.driver.takeScreenshot();
+      const base64Data = screenshot.replace(/^data:image\/png;base64,/, "");
+      fs.writeFileSync(`./images/${name}.png`, base64Data, "base64");
+    } catch (err) {
+      throw Error(err);
     }
   }
 }
