@@ -1,0 +1,626 @@
+{
+	"info": {
+		"_postman_id": "7e3a3a90-351a-4608-a11a-9199ff38a07b",
+		"name": "customer-api-v4-userrole",
+		"description": "customer-api-v4-userrole",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Data Usage",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/data-usage?type=MONTH&timeZone=Asia/Kolkata&page=1",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"data-usage"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "MONTH"
+						},
+						{
+							"key": "timeZone",
+							"value": "Asia/Kolkata"
+						},
+						{
+							"key": "imei",
+							"value": "359852051242486",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device"
+					],
+					"query": [
+						{
+							"key": "imei",
+							"value": "359852051242486",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/details/359852051242486",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"details",
+						"359852051242486"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/status",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/groups",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"groups"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "model",
+							"value": "CR48NA",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "user group",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "some description",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "ER1000T-NA",
+							"type": "text"
+						},
+						{
+							"key": "parentGroupId",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/groups/add",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Remove",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refId",
+							"value": "364",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/groups/remove",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "some group",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "some description",
+							"type": "text"
+						},
+						{
+							"key": "parentGroupId",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refId",
+							"value": "364",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/groups/update",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Detail",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/groups/details/365",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"details",
+						"365"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refId",
+							"value": "365",
+							"type": "text"
+						},
+						{
+							"key": "imeiList",
+							"value": "{\"device\":[{\"imei\":\"358148061143298\"},{\"imei\":\"358148061143454\"}]}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/groups/add/device",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"add",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Remove",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refId",
+							"value": "365",
+							"type": "text"
+						},
+						{
+							"key": "imeiList",
+							"value": "{\"device\":[{\"imei\":\"358148061143298\"},{\"imei\":\"358148061143454\"}]}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/groups/remove/device",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"remove",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Host",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/hosts?imei=358148061143298",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"hosts"
+					],
+					"query": [
+						{
+							"key": "imei",
+							"value": "358148061143298"
+						},
+						{
+							"key": "type",
+							"value": "LAN",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/notifications?imei=356961071557824",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"notifications"
+					],
+					"query": [
+						{
+							"key": "imei",
+							"value": "356961071557824"
+						},
+						{
+							"key": "page",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "refId",
+							"value": "22156",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
