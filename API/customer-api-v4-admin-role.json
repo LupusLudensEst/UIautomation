@@ -511,6 +511,77 @@
 			"response": []
 		},
 		{
+			"name": "Realtime Device Host",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c532eda0-8b95-4ea2-b422-7306006f3a4d",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/hosts/realtime?imei=356961071557824",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"hosts",
+						"realtime"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "LAN",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "imei",
+							"value": "356961071557824"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Group Add",
 			"event": [
 				{
@@ -1046,6 +1117,162 @@
 						"device",
 						"details",
 						"359852051242486"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device Detail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ece708c9-5461-4521-92ac-7be569046f4b",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/realtime/details/356961071557824",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"details",
+						"356961071557824"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device System log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6b41a43d-a8cf-408b-8476-59843024e54f",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/realtime/system-log/356961071557824",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"system-log",
+						"356961071557824"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device Kernel log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac1f5472-cb19-4e51-9892-1b815b15e0a8",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/realtime/kernel-log/356961071557824",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"kernel-log",
+						"356961071557824"
 					]
 				}
 			},
