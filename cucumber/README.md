@@ -34,8 +34,8 @@ Cucumber Framework
     npm install
 4. Create a .env file in the root directory of your project and
    add variables on new lines in the form of:
-    EMAIL=test@email.com
-    PASSWORD=password
+    EMAIL='test@email.com'
+    PASSWORD='password'
     
          
 # How to run the test
