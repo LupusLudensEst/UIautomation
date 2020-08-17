@@ -77,10 +77,6 @@ class LoginPage extends BasePage {
   async submit() {
     await this.chechDisplayed(LOCATORS.SUBMIT, "click");
   }
-
-  async getScreenshotOfError(name) {
-    await this.takeScreenShot(name);
-  }
 }
 
 export default new LoginPage();

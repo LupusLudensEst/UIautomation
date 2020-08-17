@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Test Report</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+      }
+
+      html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+      }
+
+      body {
+        font-family: sans-serif;
+        color: rgb(0, 0, 0);
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.6;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        padding: 1rem;
+        min-width: 34rem;
+      }
+
+      #report {
+        font-size: 2.5rem;
+      }
+
+      .summary_results {
+        display: flex;
+      }
+
+      .summary_status:not(:first-child) {
+        margin: 0.5rem 1rem;
+      }
+
+      .summary_status:first-child {
+        margin: 0.5rem 1rem 1rem 0rem;
+      }
+
+      .results {
+        color: #999;
+      }
+
+      .results_report {
+        display: flex;
+        border: 1px solid #e6e6e6;
+        border-top: none;
+      }
+
+      .result_status {
+        margin-left: 1.5rem;
+      }
+
+      .result_status:first-child {
+        flex-basis: 20%;
+      }
+
+      .result_status:nth-child(2) {
+        flex-basis: 60%;
+      }
+
+      .result_status:last-child {
+        flex-basis: 20%;
+      }
+
+      .result_status:not(:last-child) {
+        border-right: 1px solid #e6e6e6;
+      }
+
+      .heading {
+        font-size: 2.2rem;
+        margin: 1rem 0rem;
+        color: black;
+      }
+
+      .passed {
+        color: green;
+      }
+
+      .failed {
+        color: red;
+      }
+
+      .pending {
+        color: blue;
+      }
+
+      .skipped {
+        color: goldenrod;
+      }
+
+      .undefined {
+        color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <p id="report">report.html</p>
+      <h1 class="heading">Summary</h1>
+      <div>
+        <span id="scenarios"></span> scenarios <span id="steps"></span> steps
+        ran in <span id="duration"></span> seconds.
+      </div>
+      <div class="summary_results">
+        <div class="summary_status passed">
+          <span id="passed"></span> passed
+        </div>
+        <div class="summary_status failed">
+          <span id="failed"></span> failed
+        </div>
+        <div class="summary_status pending">
+          <span id="pending"></span> pending
+        </div>
+        <div class="summary_status skipped">
+          <span id="skipped"></span> skipped
+        </div>
+        <div class="summary_status undefined">
+          <span id="undefined"></span> undefined
+        </div>
+      </div>
+    </section>
+    <section class="results">
+      <h1 class="heading">Results</h1>
+      <div class="results_report" style="border-top: 1px solid #e6e6e6;">
+        <div class="result_status">Result</div>
+        <div class="result_status">Scenario</div>
+        <div class="result_status">Duration</div>
+      </div>
+      <div id="root"></div>
+    </section>
+    <div class="popup"></div>
+  </body>
+  <script>
+    const scenarios = document.getElementById("scenarios");
+    const steps = document.getElementById("steps");
+    const duration = document.getElementById("duration");
+
+    const passed = document.getElementById("passed");
+    const failed = document.getElementById("failed");
+    const pending = document.getElementById("pending");
+    const skipped = document.getElementById("skipped");
+    const undef = document.getElementById("undefined");
+
+    let allSteps = 0;
+    let totalDuration = 0;
+
+    let pass = 0;
+    let fail = 0;
+    let pend = 0;
+    let skip = 0;
+    let und = 0;
+
+    const root = document.getElementById("root");
+
+    const statusRendering = (status) => {
+      if (status == "passed") {
+        pass += 1;
+        return "passed";
+      } else if (status == "failed") {
+        fail += 1;
+        return "failed";
+      } else if (status == "pending") {
+        pend += 1;
+        return "pending";
+      } else if (status == "skipped") {
+        skip += 1;
+        return "skipped";
+      } else {
+        und += 1;
+        return "undefined";
+      }
+    };
+
+    const iterate = (obj) => {
+      for (let i in obj) {
+        const name = obj[i].pickle.name;
+        const status = obj[i].result.status;
+        //converting nanoseconds to seconds
+        const timeSpent = obj[i].result.duration / 1000000000;
+
+        allSteps += obj[i].pickle.steps.length;
+        totalDuration += timeSpent;
+
+        const markup = `
+    <div class="results_report">
+      <div class="result_status ${statusRendering(status)}">${status}</div>
+      <div class="result_status">${name}</div>
+      <div class="result_status">${timeSpent}</div>
+    </div>
+    `;
+
+        root.insertAdjacentHTML("beforeend", markup);
+      }
+
+      scenarios.innerHTML = obj.length;
+      steps.innerHTML = allSteps;
+      duration.innerHTML = totalDuration.toFixed(3);
+
+      passed.innerHTML = pass;
+      failed.innerHTML = fail;
+      pending.innerHTML = pend;
+      skipped.innerHTML = skip;
+      undef.innerHTML = und;
+    };
+
+    const data = async () => {
+      try {
+        await fetch("./data.json")
+          .then((response) => response.json())
+          .then((obj) => iterate(obj));
+      } catch (err) {
+        console.log("Error:", err);
+      }
+    };
+
+    data();
+  </script>
+</html>

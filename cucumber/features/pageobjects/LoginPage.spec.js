@@ -85,6 +85,6 @@ AfterAll("end", function () {
 
 After(async function (scenario) {
   if (scenario.result.status === Status.FAILED) {
-    await LoginPage.getScreenshotOfError(scenario.pickle.name);
+    await LoginPage.takeScreenShot(scenario.pickle.name);
   }
 });
