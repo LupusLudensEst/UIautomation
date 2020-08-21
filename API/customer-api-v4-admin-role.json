@@ -1609,6 +1609,58 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Reboot Device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "efe3eccb-6cca-432f-8495-560c75364960",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/realtime/reboot/356961071557824",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"reboot",
+						"356961071557824"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [

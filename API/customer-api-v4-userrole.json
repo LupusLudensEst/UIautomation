@@ -1,13 +1,29 @@
 {
 	"info": {
-		"_postman_id": "7e3a3a90-351a-4608-a11a-9199ff38a07b",
-		"name": "customer-api-v4-userrole",
-		"description": "customer-api-v4-userrole",
+		"_postman_id": "e08d3a8d-7bc4-4d7d-9c92-e456b5933fce",
+		"name": "customer-api-v4-user-role",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Data Usage",
+			"name": "Notifications",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2531aced-e98d-4c52-9fae-8507ec5cd3fb",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
 				"header": [
@@ -17,8 +33,12 @@
 						"type": "text"
 					}
 				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/data-usage?type=MONTH&timeZone=Asia/Kolkata&page=1",
+					"raw": "stage.connectedio.com:81/api/v4/notifications",
 					"host": [
 						"stage",
 						"connectedio",
@@ -28,64 +48,17 @@
 					"path": [
 						"api",
 						"v4",
-						"data-usage"
+						"notifications"
 					],
 					"query": [
 						{
-							"key": "type",
-							"value": "MONTH"
-						},
-						{
-							"key": "timeZone",
-							"value": "Asia/Kolkata"
-						},
-						{
 							"key": "imei",
-							"value": "359852051242486",
-							"disabled": true
-						},
-						{
-							"key": "size",
-							"value": "10",
+							"value": "356961071557824",
 							"disabled": true
 						},
 						{
 							"key": "page",
-							"value": "1"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Device List",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "X-API-KEY",
-						"value": "d78d00db276f81eaf232dd4788ca6f68",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device",
-					"host": [
-						"stage",
-						"connectedio",
-						"com"
-					],
-					"port": "81",
-					"path": [
-						"api",
-						"v4",
-						"device"
-					],
-					"query": [
-						{
-							"key": "imei",
-							"value": "359852051242486",
+							"value": "5",
 							"disabled": true
 						},
 						{
@@ -94,8 +67,8 @@
 							"disabled": true
 						},
 						{
-							"key": "page",
-							"value": "1",
+							"key": "refId",
+							"value": "22156",
 							"disabled": true
 						}
 					]
@@ -104,7 +77,21 @@
 			"response": []
 		},
 		{
-			"name": "Device Detail",
+			"name": "Device Host",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "043ead23-7754-4e73-93ef-fcb24bd8f056",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -118,11 +105,11 @@
 					}
 				],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
+					"mode": "formdata",
+					"formdata": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/details/359852051242486",
+					"raw": "stage.connectedio.com:81/api/v4/hosts?imei=356961071557824",
 					"host": [
 						"stage",
 						"connectedio",
@@ -132,16 +119,49 @@
 					"path": [
 						"api",
 						"v4",
-						"device",
-						"details",
-						"359852051242486"
+						"hosts"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "LAN",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "imei",
+							"value": "356961071557824"
+						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Device Status",
+			"name": "Realtime Device Host",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ee313b40-b6d8-40a5-99e8-abf34402e608",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -150,16 +170,16 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "d78d00db276f81eaf232dd4788ca6f68",
-						"type": "text"
+						"type": "text",
+						"value": "d78d00db276f81eaf232dd4788ca6f68"
 					}
 				],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
+					"mode": "formdata",
+					"formdata": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/status",
+					"raw": "stage.connectedio.com:81/api/v4/hosts/realtime?imei=356961071557824",
 					"host": [
 						"stage",
 						"connectedio",
@@ -169,15 +189,119 @@
 					"path": [
 						"api",
 						"v4",
-						"device",
-						"status"
+						"hosts",
+						"realtime"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "LAN",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "imei",
+							"value": "356961071557824"
+						}
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Group",
+			"name": "Group Add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c1aad6c2-93b2-4913-9dd5-124cc190e205",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "user group",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "some description",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "CR48NA",
+							"type": "text"
+						},
+						{
+							"key": "parentGroupId",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/groups/add",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ad9375c6-2ed0-4956-b1e5-765d9d6db4cf",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -234,101 +358,21 @@
 			"response": []
 		},
 		{
-			"name": "Group Add",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-API-KEY",
-						"value": "d78d00db276f81eaf232dd4788ca6f68",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "name",
-							"value": "user group",
-							"type": "text"
-						},
-						{
-							"key": "description",
-							"value": "some description",
-							"type": "text"
-						},
-						{
-							"key": "model",
-							"value": "ER1000T-NA",
-							"type": "text"
-						},
-						{
-							"key": "parentGroupId",
-							"value": "1",
-							"type": "text",
-							"disabled": true
-						}
-					]
-				},
-				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/add",
-					"host": [
-						"stage",
-						"connectedio",
-						"com"
-					],
-					"port": "81",
-					"path": [
-						"api",
-						"v4",
-						"groups",
-						"add"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Group Remove",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "X-API-KEY",
-						"value": "d78d00db276f81eaf232dd4788ca6f68",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "refId",
-							"value": "364",
-							"type": "text"
-						}
-					]
-				},
-				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/remove",
-					"host": [
-						"stage",
-						"connectedio",
-						"com"
-					],
-					"port": "81",
-					"path": [
-						"api",
-						"v4",
-						"groups",
-						"remove"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Group Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a5aa6f56-5448-44f3-b574-10bf3078b089",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -343,12 +387,12 @@
 					"urlencoded": [
 						{
 							"key": "name",
-							"value": "some group",
+							"value": "some group updated",
 							"type": "text"
 						},
 						{
 							"key": "description",
-							"value": "some description",
+							"value": "some description updated",
 							"type": "text"
 						},
 						{
@@ -359,7 +403,7 @@
 						},
 						{
 							"key": "refId",
-							"value": "364",
+							"value": "367",
 							"type": "text"
 						}
 					]
@@ -383,44 +427,21 @@
 			"response": []
 		},
 		{
-			"name": "Group Detail",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "X-API-KEY",
-						"value": "d78d00db276f81eaf232dd4788ca6f68",
-						"type": "text"
+			"name": "Group Add device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f50695a2-6b86-4303-920f-65d7a3a23f59",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
 					}
-				],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
-				},
-				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/details/365",
-					"host": [
-						"stage",
-						"connectedio",
-						"com"
-					],
-					"port": "81",
-					"path": [
-						"api",
-						"v4",
-						"groups",
-						"details",
-						"365"
-					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "Device Add",
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -435,7 +456,7 @@
 					"formdata": [
 						{
 							"key": "refId",
-							"value": "365",
+							"value": "367",
 							"type": "text"
 						},
 						{
@@ -465,7 +486,72 @@
 			"response": []
 		},
 		{
-			"name": "Device Remove",
+			"name": "Group Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7ad2186-bc2d-4f8c-932f-95855c1b2a7e",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/groups/details/367",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"details",
+						"367"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Remove device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3759a257-5f11-42b1-8393-4556204ee070",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -480,7 +566,7 @@
 					"urlencoded": [
 						{
 							"key": "refId",
-							"value": "365",
+							"value": "367",
 							"type": "text"
 						},
 						{
@@ -510,12 +596,23 @@
 			"response": []
 		},
 		{
-			"name": "Device Host",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "Group Remove",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7c2847a3-7948-4596-8113-9556769ff643",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [
 					{
 						"key": "X-API-KEY",
@@ -524,11 +621,17 @@
 					}
 				],
 				"body": {
-					"mode": "formdata",
-					"formdata": []
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refId",
+							"value": "366",
+							"type": "text"
+						}
+					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/hosts?imei=358148061143298",
+					"raw": "stage.connectedio.com:81/api/v4/groups/remove",
 					"host": [
 						"stage",
 						"connectedio",
@@ -538,25 +641,64 @@
 					"path": [
 						"api",
 						"v4",
-						"hosts"
+						"groups",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ffbe8987-05a5-4192-a97e-96a85d985724",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device"
 					],
 					"query": [
 						{
 							"key": "imei",
-							"value": "358148061143298"
-						},
-						{
-							"key": "type",
-							"value": "LAN",
-							"disabled": true
-						},
-						{
-							"key": "page",
-							"value": null,
+							"value": "359852051242486",
 							"disabled": true
 						},
 						{
 							"key": "size",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "page",
 							"value": "1",
 							"disabled": true
 						}
@@ -566,7 +708,21 @@
 			"response": []
 		},
 		{
-			"name": "Notifications",
+			"name": "Device Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e82061d5-3035-4dbb-8912-61575594372f",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -584,7 +740,7 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/notifications?imei=356961071557824",
+					"raw": "stage.connectedio.com:81/api/v4/device/details/359852051242486",
 					"host": [
 						"stage",
 						"connectedio",
@@ -594,32 +750,312 @@
 					"path": [
 						"api",
 						"v4",
-						"notifications"
+						"device",
+						"details",
+						"359852051242486"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device System log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "945121c3-6508-4701-a523-a29336fe8d07",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "d78d00db276f81eaf232dd4788ca6f68"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/realtime/system-log/356961071557824",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"system-log",
+						"356961071557824"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device Kernel log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bd5ba822-e67d-42d4-b453-2fe83ef53c08",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "d78d00db276f81eaf232dd4788ca6f68"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/realtime/kernel-log/356961071557824",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"kernel-log",
+						"356961071557824"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "79f663e2-1549-4524-9df8-eadde2b966e3",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/status",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Datausage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d193a498-3a57-4009-acc1-5e84a80ec261",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/data-usage?type=MONTH&timeZone=Asia/Kolkata&page=1",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"data-usage"
 					],
 					"query": [
 						{
-							"key": "imei",
-							"value": "356961071557824"
+							"key": "type",
+							"value": "MONTH"
 						},
 						{
-							"key": "page",
-							"value": "5",
+							"key": "timeZone",
+							"value": "Asia/Kolkata"
+						},
+						{
+							"key": "imei",
+							"value": "359852051242486",
 							"disabled": true
 						},
 						{
 							"key": "size",
-							"value": "2",
+							"value": "10",
 							"disabled": true
 						},
 						{
-							"key": "refId",
-							"value": "22156",
-							"disabled": true
+							"key": "page",
+							"value": "1"
 						}
 					]
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Reboot Device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "efe3eccb-6cca-432f-8495-560c75364960",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "d78d00db276f81eaf232dd4788ca6f68",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "stage.connectedio.com:81/api/v4/device/realtime/reboot/356961071557824",
+					"host": [
+						"stage",
+						"connectedio",
+						"com"
+					],
+					"port": "81",
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"reboot",
+						"356961071557824"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "504f49b7-5d63-4726-bd20-d038d94079b8",
+				"type": "text/javascript",
+				"exec": [
+					"var randomInt = Math.floor((Math.random() * 1000))",
+					"var passWord = `CIO${randomInt}${randomInt}!`;",
+					"pm.environment.set(\"passWord\", passWord);",
+					"",
+					"",
+					"pm.environment.set('randomNumber', Math.floor(Math.random() * 5));"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f48d1def-ecb2-4935-a63c-a132e8c77314",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"protocolProfileBehavior": {}
