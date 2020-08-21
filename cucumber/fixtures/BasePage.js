@@ -22,8 +22,6 @@ if (HEADLESS) {
   chromeOptions.addArguments("no-sandbox");
   chromeOptions.addArguments("whitelisted-ips 0.0.0.0");
   chromeOptions.addArguments("disable-gpu");
-  chromeOptions.addArguments("no-sandbox");
-  chromeOptions.addArguments("whitelisted-ips 0.0.0.0");
   firefoxOptions.addArguments("headless");
   firefoxOptions.addArguments("no-sandbox");
   firefoxOptions.addArguments("whitelisted-ips 0.0.0.0");

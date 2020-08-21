@@ -1,6 +1,6 @@
 /* eslint-disable */
-const fs = require("fs");
-const { After, AfterAll } = require("cucumber");
+import { writeFile } from "fs";
+import { After, AfterAll } from "cucumber";
 
 const output = [];
 
@@ -9,7 +9,7 @@ After(async function (scenario) {
 });
 
 AfterAll("end", function () {
-  fs.writeFile("./reports/data.json", JSON.stringify(output), (err) => {
+  writeFile("./reports/data.json", JSON.stringify(output), (err) => {
     if (err) console.log(err);
   });
 });
