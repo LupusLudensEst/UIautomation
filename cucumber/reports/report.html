@@ -92,18 +92,6 @@
       .failed {
         color: red;
       }
-
-      .pending {
-        color: blue;
-      }
-
-      .skipped {
-        color: goldenrod;
-      }
-
-      .undefined {
-        color: orangered;
-      }
     </style>
   </head>
   <body>
@@ -120,15 +108,6 @@
         </div>
         <div class="summary_status failed">
           <span id="failed"></span> failed
-        </div>
-        <div class="summary_status pending">
-          <span id="pending"></span> pending
-        </div>
-        <div class="summary_status skipped">
-          <span id="skipped"></span> skipped
-        </div>
-        <div class="summary_status undefined">
-          <span id="undefined"></span> undefined
         </div>
       </div>
     </section>
@@ -150,18 +129,12 @@
 
     const passed = document.getElementById("passed");
     const failed = document.getElementById("failed");
-    const pending = document.getElementById("pending");
-    const skipped = document.getElementById("skipped");
-    const undef = document.getElementById("undefined");
 
     let allSteps = 0;
     let totalDuration = 0;
 
     let pass = 0;
     let fail = 0;
-    let pend = 0;
-    let skip = 0;
-    let und = 0;
 
     const root = document.getElementById("root");
 
@@ -169,18 +142,9 @@
       if (status == "passed") {
         pass += 1;
         return "passed";
-      } else if (status == "failed") {
+      } else {
         fail += 1;
         return "failed";
-      } else if (status == "pending") {
-        pend += 1;
-        return "pending";
-      } else if (status == "skipped") {
-        skip += 1;
-        return "skipped";
-      } else {
-        und += 1;
-        return "undefined";
       }
     };
 
@@ -211,9 +175,6 @@
 
       passed.innerHTML = pass;
       failed.innerHTML = fail;
-      pending.innerHTML = pend;
-      skipped.innerHTML = skip;
-      undef.innerHTML = und;
     };
 
     const data = async () => {
