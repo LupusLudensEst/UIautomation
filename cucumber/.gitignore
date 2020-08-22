@@ -2,3 +2,5 @@
 .env
 images*
 !images/.gitkeep
+reports*
+!reports/report.html
