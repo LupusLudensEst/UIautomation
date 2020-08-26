@@ -3,16 +3,17 @@ Feature: Login
 
     Testing the admin login page functionality
     Background: Login page
-        Given I am on the Login page
+        When I am on the "/login" page
 
     Scenario: Login page | Login with correct credentials
-        When Login with correct credentials
+        And Login with correct credentials
+        And The someone already connected alert is popped up
         Then The user is logged in
 
     Scenario: Login page | login with wrong password
         When Login with wrong password
         Then The invalidAlert is popped up
-    
+
     Scenario: Login page | login with wrong username
         When Login with wrong username
         Then The invalidAlert is popped up

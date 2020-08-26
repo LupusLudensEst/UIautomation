@@ -13,4 +13,4 @@ export const EXPLICIT_TIMEOUT = 10000;
 export const BROWSER_TYPE = "Chrome";
 
 // set browser options (true, false)
-export const HEADLESS = true;
+export const HEADLESS = false;

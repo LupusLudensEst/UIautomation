@@ -1,17 +1,15 @@
 import {
-  EXPLICIT_TIMEOUT, BaseUrl, BROWSER_TYPE, HEADLESS,
-} from "./params";
-
-const fs = require("fs");
+  EXPLICIT_TIMEOUT,
+  BROWSER_TYPE,
+  HEADLESS,
+} from "../../fixtures/params";
 
 const webdriver = require("selenium-webdriver");
 const { until } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const firefox = require("selenium-webdriver/firefox");
-
+const { setDefaultTimeout, setWorldConstructor } = require("cucumber");
 // set custom wait time between tests
-const { setDefaultTimeout } = require("cucumber");
-
 setDefaultTimeout(60 * 600);
 
 const chromeOptions = new chrome.Options();
@@ -44,27 +42,15 @@ const getBrowser = () => {
   throw TypeError(`Sorry ${BROWSER_TYPE} browser is NOT supported`);
 };
 
-export default class BasePage {
-  constructor() {
-    this.driver = getBrowser();
-    this.driver.manage().window().maximize();
-    this.pageUrl = null;
-  }
-
-  async openURL() {
-    await this.driver.get(BaseUrl + this.pageUrl);
-    await this.driver.wait(until.urlIs(BaseUrl + this.pageUrl));
-  }
-
-  async closeSession() {
-    await this.driver.quit();
-  }
-
-  async chechDisplayed(locator, action = "isDisplaed") {
+function CustomWorld() {
+  this.webdriver = getBrowser();
+  this.webdriver.manage().window().maximize();
+  this.pageUrl = null;
+  this.chechDisplayed = async (locator, action = "isDisplaed") => {
     if (typeof action === "string") {
       if (action === "isDisplaed") {
         try {
-          await this.driver
+          await this.webdriver
             .wait(until.elementLocated(locator), EXPLICIT_TIMEOUT)
             .isDisplayed();
         } catch {
@@ -73,7 +59,7 @@ export default class BasePage {
       } else if (action === "click") {
         try {
           await (
-            await this.driver.wait(
+            await this.webdriver.wait(
               until.elementLocated(locator),
               EXPLICIT_TIMEOUT,
             )
@@ -89,15 +75,7 @@ export default class BasePage {
     } else {
       throw TypeError(`"action" must be a "string" but got "${typeof action}"`);
     }
-  }
-
-  async takeScreenShot(name) {
-    try {
-      const screenshot = await this.driver.takeScreenshot();
-      const base64Data = screenshot.replace(/^data:image\/png;base64,/, "");
-      fs.writeFileSync(`./images/${name}.png`, base64Data, "base64");
-    } catch (err) {
-      throw Error(err);
-    }
-  }
+  };
 }
+
+setWorldConstructor(CustomWorld);
