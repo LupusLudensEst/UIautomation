@@ -3,7 +3,7 @@ Feature: Login
 
     Testing the admin login page functionality
     Background: Login page
-        When I am on the "/login" page
+        Given I am on the "/login" page
 
     Scenario: Login page | Login with correct credentials
         And Login with correct credentials

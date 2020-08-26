@@ -3,7 +3,7 @@ Feature: Footer
 
     Testing footer
     Background: Footer
-        When I am on the "/login" page
+        Given I am on the "/login" page
         And Login with correct credentials
         And The someone already connected alert is popped up
 

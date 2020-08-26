@@ -4,7 +4,7 @@ const { expect } = require("chai");
 const { Given, When, Then } = require("cucumber");
 const { By, until } = require("selenium-webdriver");
 
-When("I am on the {string} page", async function (page) {
+Given("I am on the {string} page", async function (page) {
   await this.webdriver.get(BaseUrl + page);
   await this.webdriver.wait(until.urlIs(BaseUrl + page));
 });

@@ -6,9 +6,7 @@ import { USERNAME, PASSWORD, EXPLICIT_TIMEOUT } from "../../fixtures/params";
 const LOCATORS = {
   EMAIL: By.css("[name='email']"),
   PASSWORD: By.css("[name='password']"),
-  // ACCEPT: By.xpath("//button[contains(text(), 'OK')]"),
   ACCEPT: By.xpath("//div[@class='swal2-actions']/button[1]"),
-  // LOGOUT: By.className("fas fa-sign-out-alt"),
   LOGOUT: By.xpath("//i[@class='fas fa-sign-out-alt']"),
   SUBMIT: By.css("[type='submit']"),
   INVALID: By.xpath(
