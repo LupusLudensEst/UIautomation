@@ -1,0 +1,1062 @@
+{
+	"info": {
+		"_postman_id": "d4080cc4-11e4-4777-9e88-33faf082cf18",
+		"name": "dev-api-v4-user-role",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Notifications",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d520d6ac-1edd-463b-876f-d338f54a59f3",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/notifications",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"notifications"
+					],
+					"query": [
+						{
+							"key": "imei",
+							"value": "356961071557824",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "refId",
+							"value": "22156",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Host",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "714d2d4a-33de-43ae-9a9c-b60a334b5b6b",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/hosts?imei=358942053333382",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"hosts"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "LAN",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "imei",
+							"value": "358942053333382"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device Host",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "28e320e4-08a7-4643-af87-14c06b60b573",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/hosts/realtime?imei=358148061143454",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"hosts",
+						"realtime"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "LAN",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "imei",
+							"value": "358148061143454"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6d3ddcf1-845a-4458-8bda-9950df37de06",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "user group",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "some description",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "CR48NA",
+							"type": "text"
+						},
+						{
+							"key": "parentGroupId",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/groups/add",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "70d6825c-c62c-4e15-8fc4-99c8a4715b0a",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/groups",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "model",
+							"value": "CR48NA",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "27c651db-d89d-4100-932a-7433a608fff3",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "some group updated",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "some description updated",
+							"type": "text"
+						},
+						{
+							"key": "parentGroupId",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refId",
+							"value": "114",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/groups/update",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Add device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3a453a36-3bc0-46d5-b22c-467f75b864d5",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refId",
+							"value": "349",
+							"type": "text"
+						},
+						{
+							"key": "imeiList",
+							"value": "{\"device\":[{\"imei\":\"358148061143454\"}]}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/groups/add/device",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"add",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cf6f80ba-9d7c-4f8b-b0a3-661d086f56ae",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/groups/details/114",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"details",
+						"114"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Remove device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a47ac136-2b00-4ebe-bbe8-30eab870f9d2",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refId",
+							"value": "349",
+							"type": "text"
+						},
+						{
+							"key": "imeiList",
+							"value": "{\"device\":[{\"imei\":\"358148061143454\"}]}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/groups/remove/device",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"remove",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Remove",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f8cd27d-adfb-46b9-b36e-770c12ea7844",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refId",
+							"value": "153",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/groups/remove",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7999dcd8-125a-434c-a6af-8e4ba3394eb6",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/device",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device"
+					],
+					"query": [
+						{
+							"key": "imei",
+							"value": "359852051242486",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "297143c4-5a8b-451d-93c6-fe1268aafab5",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/device/details/359852051242486",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"details",
+						"359852051242486"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device System log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "422123a2-b132-4925-a95d-faf455e7c733",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/device/realtime/system-log/358148061143454",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"system-log",
+						"358148061143454"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device Kernel log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "022e6e01-6106-4d35-a201-d9bc0243380f",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/device/realtime/kernel-log/358148061143454",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"kernel-log",
+						"358148061143454"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "64276290-f143-4029-961f-585ff2d887c1",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/device/status",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Datausage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3418fde0-ecf3-4684-b40f-73da77a9911f",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/data-usage?type=MONTH&timeZone=Asia/Kolkata&page=1",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"data-usage"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "MONTH"
+						},
+						{
+							"key": "timeZone",
+							"value": "Asia/Kolkata"
+						},
+						{
+							"key": "imei",
+							"value": "359852051242486",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reboot Device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dc7ec00a-383d-4ccc-8eae-9cbafa9235e6",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://devapi.connectedio.com/api/v4/device/realtime/reboot/358148061143454",
+					"protocol": "https",
+					"host": [
+						"devapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"reboot",
+						"358148061143454"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "abb0d488-b83a-4ae5-b39d-132ac9683eff",
+				"type": "text/javascript",
+				"exec": [
+					"var randomInt = Math.floor((Math.random() * 1000))",
+					"var passWord = `CIO${randomInt}${randomInt}!`;",
+					"pm.environment.set(\"passWord\", passWord);",
+					"",
+					"",
+					"pm.environment.set('randomNumber', Math.floor(Math.random() * 5));"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2d9a15ac-53d7-49ae-81ad-ac3d5a21aaea",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
