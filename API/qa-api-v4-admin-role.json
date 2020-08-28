@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "fcb4b2e8-cb5f-4404-8415-754d63a8e14d",
-		"name": "customer-api-v4-admin-role",
+		"_postman_id": "db3006d3-fb46-4af3-b4ff-c834f542c9a8",
+		"name": "qa-api-v4-admin-role",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "16aa617b-920a-42a7-9989-c9879c19eabe",
+						"id": "817cdd15-5486-4851-83de-99f80dae366d",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(201);",
@@ -23,7 +23,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b951d827-5610-48ef-a6fd-757a19f8f750",
+						"id": "5bdccd55-f353-4275-8a87-0b3fefca6f24",
 						"exec": [
 							"var randomInt = Math.floor((Math.random() * 1000))",
 							"var newPass = `CIO${randomInt}${randomInt}!`;",
@@ -45,7 +45,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -120,13 +120,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/users/add",
+					"raw": "https://qaapi.connectedio.com/api/v4/users/add",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -143,7 +143,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "13d53dce-e718-4589-ac22-d2d340a4c9fd",
+						"id": "7b00d520-fe27-47ff-bd77-6547c000832f",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -158,7 +158,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -177,7 +177,7 @@
 						},
 						{
 							"key": "email",
-							"value": "jinu+52@connectedio.com",
+							"value": "test@connectedio.com",
 							"type": "text"
 						},
 						{
@@ -222,19 +222,19 @@
 						},
 						{
 							"key": "refId",
-							"value": "4277",
+							"value": "5118",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/users/update",
+					"raw": "https://qaapi.connectedio.com/api/v4/users/update",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -251,7 +251,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c9dfd893-6766-41f7-96f0-befef9e42254",
+						"id": "852ed027-1ab2-419b-9a2e-c876a83222c9",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -269,7 +269,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -278,13 +278,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/users",
+					"raw": "https://qaapi.connectedio.com/api/v4/users",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -312,7 +312,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "690b2f3c-0a7c-466e-864c-ab053ef6cfce",
+						"id": "31998fc3-dde4-424c-bd0b-b726590d9e79",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -324,7 +324,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b7bb11f1-7db1-47dc-8bf3-a9cd57c941d4",
+						"id": "87f1ce18-ca0b-4827-9628-efbb93539456",
 						"exec": [
 							""
 						],
@@ -337,7 +337,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -352,13 +352,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/users/remove",
+					"raw": "https://qaapi.connectedio.com/api/v4/users/remove",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -375,7 +375,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "2f22b7c7-bb08-4cfa-a40e-5d5a86115ba2",
+						"id": "9e1a781f-49ed-419c-81d2-ff82fbed046b",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -393,7 +393,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -402,13 +402,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/notifications",
+					"raw": "https://qaapi.connectedio.com/api/v4/notifications",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -446,7 +446,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fa728c10-3d1c-41ee-bca8-bea320b48c03",
+						"id": "745fdd9f-a7cc-4a09-b125-9cee2ca7a354",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -464,7 +464,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -473,13 +473,13 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/hosts?imei=358942053333382",
+					"raw": "https://qaapi.connectedio.com/api/v4/hosts?imei=351862107325316",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -503,7 +503,7 @@
 						},
 						{
 							"key": "imei",
-							"value": "358942053333382"
+							"value": "351862107325316"
 						}
 					]
 				}
@@ -516,7 +516,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c532eda0-8b95-4ea2-b422-7306006f3a4d",
+						"id": "aed01a8c-30bf-4005-b76c-8d9bdf11f52f",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -535,7 +535,7 @@
 					{
 						"key": "X-API-KEY",
 						"type": "text",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+						"value": "b11294de856fbc4b1d0c996970a437c0"
 					}
 				],
 				"body": {
@@ -543,13 +543,13 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/hosts/realtime?imei=356961071557824",
+					"raw": "https://qaapi.connectedio.com/api/v4/hosts/realtime?imei=351862107325316",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -574,7 +574,7 @@
 						},
 						{
 							"key": "imei",
-							"value": "356961071557824"
+							"value": "351862107325316"
 						}
 					]
 				}
@@ -587,7 +587,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a9ed18e0-0d71-445d-a236-5075f4b8ed5d",
+						"id": "30c3682e-6fd4-4f79-90b9-6136ec07da82",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(201);",
@@ -602,7 +602,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -621,7 +621,7 @@
 						},
 						{
 							"key": "model",
-							"value": "CR48NA",
+							"value": "ER2500T-NA-CAT1",
 							"type": "text"
 						},
 						{
@@ -633,13 +633,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/add",
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/add",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -656,7 +656,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1b3cb662-9fc7-44e5-80a4-2cd3979ec923",
+						"id": "2a3ffdd3-12b2-4e96-916a-2f7b6dd9f1da",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -674,7 +674,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -683,13 +683,13 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups",
+					"raw": "https://qaapi.connectedio.com/api/v4/groups",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -727,7 +727,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d7383817-1455-42c9-8df8-c093c446b843",
+						"id": "bf45c3df-e658-46e0-88b6-05cb21f651fb",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -742,7 +742,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -767,19 +767,19 @@
 						},
 						{
 							"key": "refId",
-							"value": "367",
+							"value": "587",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/update",
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/update",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -796,7 +796,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3dcdc2a6-61c0-47aa-811d-8e5d41c18c9b",
+						"id": "9a7425ce-2e12-4315-b5de-67f60efbd1b2",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -811,7 +811,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -820,24 +820,24 @@
 					"formdata": [
 						{
 							"key": "refId",
-							"value": "367",
+							"value": "587",
 							"type": "text"
 						},
 						{
 							"key": "imeiList",
-							"value": "{\"device\":[{\"imei\":\"358148061143298\"},{\"imei\":\"358148061143454\"}]}",
+							"value": "{\"device\":[{\"imei\":\"351862107325316\"}]}",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/add/device",
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/add/device",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -855,7 +855,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "22445266-48db-45bd-a0cb-0ae23ef47c8d",
+						"id": "a1d8cfc6-b229-4f42-9b45-3424eeb9349a",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -873,7 +873,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -882,19 +882,19 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/details/367",
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/details/587",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"groups",
 						"details",
-						"367"
+						"587"
 					]
 				}
 			},
@@ -906,7 +906,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8fb4ca34-d867-492c-b788-2b6fd0802c16",
+						"id": "25cb3de9-ac72-467c-b22b-20c634d45d1a",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -921,7 +921,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -930,24 +930,24 @@
 					"urlencoded": [
 						{
 							"key": "refId",
-							"value": "367",
+							"value": "587",
 							"type": "text"
 						},
 						{
 							"key": "imeiList",
-							"value": "{\"device\":[{\"imei\":\"358148061143298\"},{\"imei\":\"358148061143454\"}]}",
+							"value": "{\"device\":[{\"imei\":\"351862107325316\"}]}",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/remove/device",
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/remove/device",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -965,7 +965,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4f3f9b48-fc0a-45e3-ad2d-c547b1e71ca6",
+						"id": "077feaf9-705d-437d-9efc-134f64a2d26c",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -980,7 +980,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -989,19 +989,19 @@
 					"urlencoded": [
 						{
 							"key": "refId",
-							"value": "366",
+							"value": "588",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/remove",
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/remove",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1018,7 +1018,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f5bd110d-dc25-40ec-8de8-f91e515090a5",
+						"id": "2ee4525b-56fc-4752-b58a-fdec99fe03d0",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1033,18 +1033,18 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device",
+					"raw": "https://qaapi.connectedio.com/api/v4/device",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1077,7 +1077,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4ac2db2b-155e-4803-9543-be365bcb95a3",
+						"id": "38a585d0-9e6f-4322-9a8a-3b647d032a03",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1095,7 +1095,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -1104,19 +1104,19 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/details/359852051242486",
+					"raw": "https://qaapi.connectedio.com/api/v4/device/details/351862107325316",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"device",
 						"details",
-						"359852051242486"
+						"351862107325316"
 					]
 				}
 			},
@@ -1128,7 +1128,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ece708c9-5461-4521-92ac-7be569046f4b",
+						"id": "a14f1794-f31b-4abf-82c0-59b2d5710de4",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1147,7 +1147,7 @@
 					{
 						"key": "X-API-KEY",
 						"type": "text",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+						"value": "b11294de856fbc4b1d0c996970a437c0"
 					}
 				],
 				"body": {
@@ -1155,20 +1155,20 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/realtime/details/356961071557824",
+					"raw": "https://qaapi.connectedio.com/api/v4/device/realtime/details/351862107325316",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"device",
 						"realtime",
 						"details",
-						"356961071557824"
+						"351862107325316"
 					]
 				}
 			},
@@ -1180,7 +1180,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6b41a43d-a8cf-408b-8476-59843024e54f",
+						"id": "72b7f4b6-ddf6-458b-9fcb-1c19fee63565",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1199,7 +1199,7 @@
 					{
 						"key": "X-API-KEY",
 						"type": "text",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+						"value": "b11294de856fbc4b1d0c996970a437c0"
 					}
 				],
 				"body": {
@@ -1207,20 +1207,20 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/realtime/system-log/356961071557824",
+					"raw": "https://qaapi.connectedio.com/api/v4/device/realtime/system-log/351862107325316",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"device",
 						"realtime",
 						"system-log",
-						"356961071557824"
+						"351862107325316"
 					]
 				}
 			},
@@ -1232,7 +1232,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ac1f5472-cb19-4e51-9892-1b815b15e0a8",
+						"id": "c6439ae4-fde4-4526-8fa6-ea61d1e7f99d",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1251,7 +1251,7 @@
 					{
 						"key": "X-API-KEY",
 						"type": "text",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+						"value": "b11294de856fbc4b1d0c996970a437c0"
 					}
 				],
 				"body": {
@@ -1259,20 +1259,20 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/realtime/kernel-log/356961071557824",
+					"raw": "https://qaapi.connectedio.com/api/v4/device/realtime/kernel-log/351862107325316",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"device",
 						"realtime",
 						"kernel-log",
-						"356961071557824"
+						"351862107325316"
 					]
 				}
 			},
@@ -1284,7 +1284,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d4916d43-d5a1-4301-a691-cd7eca2a762a",
+						"id": "6c792616-e99e-48d2-ac0a-61536fb700e9",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1302,7 +1302,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -1311,13 +1311,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/status",
+					"raw": "https://qaapi.connectedio.com/api/v4/device/status",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1334,7 +1334,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6b8ae4fe-935e-4097-a025-b391a7724d10",
+						"id": "07793ff7-30d3-468b-8f73-38582b421e32",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(201);",
@@ -1349,7 +1349,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					},
 					{
@@ -1370,12 +1370,12 @@
 					"formdata": [
 						{
 							"key": "imei",
-							"value": "356162050154192",
+							"value": "358148062784926",
 							"type": "text"
 						},
 						{
 							"key": "serialNo",
-							"value": "1707200A0112",
+							"value": "1933215B2224",
 							"type": "text"
 						},
 						{
@@ -1386,13 +1386,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/add",
+					"raw": "https://qaapi.connectedio.com/api/v4/device/add",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1409,7 +1409,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "eb26cfb8-2de3-49cd-9a60-96002ad507bd",
+						"id": "3d6273fb-800a-41fa-9360-236b5a5a62a1",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1424,18 +1424,18 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/data-usage?type=MONTH&timeZone=Asia/Kolkata&page=1",
+					"raw": "https://qaapi.connectedio.com/api/v4/data-usage?type=MONTH&timeZone=Asia/Kolkata&page=1",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1475,7 +1475,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7368fa6a-97f0-4220-ad18-e91787fffa2e",
+						"id": "c1ba9155-5fed-49ec-b80e-04b67518c39e",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1490,7 +1490,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -1499,7 +1499,7 @@
 					"urlencoded": [
 						{
 							"key": "imei",
-							"value": "358148061732066",
+							"value": "351862107325316",
 							"type": "text"
 						},
 						{
@@ -1540,13 +1540,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/update",
+					"raw": "https://qaapi.connectedio.com/api/v4/device/update",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1563,7 +1563,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "647e2ea4-4259-4d68-ae91-0e7ec6981ee3",
+						"id": "5e230ffd-bad1-4f2a-843f-a6e1cce1365b",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1578,7 +1578,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
 						"type": "text"
 					}
 				],
@@ -1587,24 +1587,76 @@
 					"urlencoded": [
 						{
 							"key": "imei",
-							"value": "356162050154192",
+							"value": "358148062784926",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/remove",
+					"raw": "https://qaapi.connectedio.com/api/v4/device/remove",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"qaapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"device",
 						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reboot Device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "43d6610a-291b-42b5-a11b-a34af3207703",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/device/realtime/reboot/351862107325316",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"reboot",
+						"351862107325316"
 					]
 				}
 			},
@@ -1615,7 +1667,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "20bb6671-8098-49fe-83f1-eea9c4ae7fa6",
+				"id": "98f44564-028d-4fe7-8668-ecdd6e52a42b",
 				"type": "text/javascript",
 				"exec": [
 					"var randomInt = Math.floor((Math.random() * 1000))",
@@ -1630,7 +1682,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e82dd89d-059d-4950-9111-d88df179508c",
+				"id": "c3104386-f2ae-4e29-a005-6cc3a57347e0",
 				"type": "text/javascript",
 				"exec": [
 					""

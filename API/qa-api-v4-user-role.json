@@ -1,0 +1,1062 @@
+{
+	"info": {
+		"_postman_id": "49183b86-2947-4435-b377-ed767282a290",
+		"name": "qa-api-v4-user-role",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Notifications",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b0adafe8-3f22-4681-9bc8-bbe2761c22a9",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/notifications",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"notifications"
+					],
+					"query": [
+						{
+							"key": "imei",
+							"value": "356961071557824",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "5",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "refId",
+							"value": "22156",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Host",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a6f37ad2-4ba0-4354-b83c-2cc9a0d2bc24",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/hosts?imei=351862107325316",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"hosts"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "LAN",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "imei",
+							"value": "351862107325316"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device Host",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "524829e5-8bcf-4e07-889b-c23e7caef9a4",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "b11294de856fbc4b1d0c996970a437c0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/hosts/realtime?imei=351862107325316",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"hosts",
+						"realtime"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "LAN",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "imei",
+							"value": "351862107325316"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Add",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a846e241-2838-4818-85ae-a962272264ac",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "user group",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "some description",
+							"type": "text"
+						},
+						{
+							"key": "model",
+							"value": "ER2500T-NA-CAT1",
+							"type": "text"
+						},
+						{
+							"key": "parentGroupId",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/add",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ad6155e-6168-4971-9201-f52f91a7afe6",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/groups",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "model",
+							"value": "CR48NA",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9a7dae17-f6c5-405c-9ce5-2790d0f9c081",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "some group updated",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "some description updated",
+							"type": "text"
+						},
+						{
+							"key": "parentGroupId",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "refId",
+							"value": "587",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/update",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Add device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0cd48b26-48e3-4855-9a11-3efe674f08a0",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refId",
+							"value": "587",
+							"type": "text"
+						},
+						{
+							"key": "imeiList",
+							"value": "{\"device\":[{\"imei\":\"351862107325316\"}]}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/add/device",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"add",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "862e8443-409c-469f-924d-e395c3d56fc6",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/details/587",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"details",
+						"587"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Remove device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bb651ed6-2952-4d5a-bb72-4fb0b1625e84",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refId",
+							"value": "587",
+							"type": "text"
+						},
+						{
+							"key": "imeiList",
+							"value": "{\"device\":[{\"imei\":\"351862107325316\"}]}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/remove/device",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"remove",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Group Remove",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ea7788b-3e88-4687-9c0f-83bcf475c2e3",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "refId",
+							"value": "588",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/groups/remove",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"groups",
+						"remove"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device List",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "47708cee-b508-4801-8a55-9be9179dee59",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/device",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device"
+					],
+					"query": [
+						{
+							"key": "imei",
+							"value": "359852051242486",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "2",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "36a3c415-12b7-4acb-be9e-0a25dcf6284a",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/device/details/351862107325316",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"details",
+						"351862107325316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device System log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9b3a6ff8-21e4-4664-b603-83c2255dd2ef",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "b11294de856fbc4b1d0c996970a437c0"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/device/realtime/system-log/351862107325316",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"system-log",
+						"351862107325316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Realtime Device Kernel log",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "560f756d-9884-4a11-b96e-c4eff4db70c4",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"type": "text",
+						"value": "b11294de856fbc4b1d0c996970a437c0"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/device/realtime/kernel-log/351862107325316",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"kernel-log",
+						"351862107325316"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Status",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5c50bac0-19a1-4da9-adc8-5135bbc73f29",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/device/status",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Device Datausage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2f255cc8-450e-4af6-aecb-8db555c05f57",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/data-usage?type=MONTH&timeZone=Asia/Kolkata&page=1",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"data-usage"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "MONTH"
+						},
+						{
+							"key": "timeZone",
+							"value": "Asia/Kolkata"
+						},
+						{
+							"key": "imei",
+							"value": "359852051242486",
+							"disabled": true
+						},
+						{
+							"key": "size",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reboot Device",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "598f15d7-89c9-44b0-a13f-a33cfcb5ed34",
+						"exec": [
+							"pm.test(\"Status test\", function () {",
+							"   pm.expect(pm.response.code).to.equal(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "b11294de856fbc4b1d0c996970a437c0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://qaapi.connectedio.com/api/v4/device/realtime/reboot/351862107325316",
+					"protocol": "https",
+					"host": [
+						"qaapi",
+						"connectedio",
+						"com"
+					],
+					"path": [
+						"api",
+						"v4",
+						"device",
+						"realtime",
+						"reboot",
+						"351862107325316"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "35789d8b-e652-41a6-89a6-06e08d095f62",
+				"type": "text/javascript",
+				"exec": [
+					"var randomInt = Math.floor((Math.random() * 1000))",
+					"var passWord = `CIO${randomInt}${randomInt}!`;",
+					"pm.environment.set(\"passWord\", passWord);",
+					"",
+					"",
+					"pm.environment.set('randomNumber', Math.floor(Math.random() * 5));"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "39ad29ef-de57-47de-8922-7763f03be707",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

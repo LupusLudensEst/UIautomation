@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "fcb4b2e8-cb5f-4404-8415-754d63a8e14d",
-		"name": "customer-api-v4-admin-role",
+		"_postman_id": "a7f048a5-7255-4983-be4d-f65147fd28cd",
+		"name": "dev-api-v4-admin-role",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "16aa617b-920a-42a7-9989-c9879c19eabe",
+						"id": "6f07612e-f3e9-428c-b534-ba1c836ce373",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(201);",
@@ -23,7 +23,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b951d827-5610-48ef-a6fd-757a19f8f750",
+						"id": "5294874d-e4cd-4246-a798-299ae871cf5e",
 						"exec": [
 							"var randomInt = Math.floor((Math.random() * 1000))",
 							"var newPass = `CIO${randomInt}${randomInt}!`;",
@@ -45,7 +45,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -120,13 +120,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/users/add",
+					"raw": "https://devapi.connectedio.com/api/v4/users/add",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -143,7 +143,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "13d53dce-e718-4589-ac22-d2d340a4c9fd",
+						"id": "3e493865-2779-47f3-b5ae-e098953307a1",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -158,7 +158,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -177,7 +177,7 @@
 						},
 						{
 							"key": "email",
-							"value": "jinu+52@connectedio.com",
+							"value": "jinu@connectedio.com",
 							"type": "text"
 						},
 						{
@@ -222,19 +222,19 @@
 						},
 						{
 							"key": "refId",
-							"value": "4277",
+							"value": "1376",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/users/update",
+					"raw": "https://devapi.connectedio.com/api/v4/users/update",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -251,7 +251,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c9dfd893-6766-41f7-96f0-befef9e42254",
+						"id": "a677e914-2e3b-41d9-8eef-94bc99a14265",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -269,7 +269,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -278,13 +278,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/users",
+					"raw": "https://devapi.connectedio.com/api/v4/users",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -312,7 +312,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "690b2f3c-0a7c-466e-864c-ab053ef6cfce",
+						"id": "82bdc757-c8b6-4e28-9fe1-f995ce730002",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -324,7 +324,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "b7bb11f1-7db1-47dc-8bf3-a9cd57c941d4",
+						"id": "5ecaac27-f1d1-456e-8618-e14e401b03a6",
 						"exec": [
 							""
 						],
@@ -337,7 +337,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -352,13 +352,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/users/remove",
+					"raw": "https://devapi.connectedio.com/api/v4/users/remove",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -375,7 +375,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "2f22b7c7-bb08-4cfa-a40e-5d5a86115ba2",
+						"id": "3658d7a9-2c47-48a7-ad48-e9e3abb351b1",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -393,7 +393,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -402,13 +402,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/notifications",
+					"raw": "https://devapi.connectedio.com/api/v4/notifications",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -446,7 +446,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "fa728c10-3d1c-41ee-bca8-bea320b48c03",
+						"id": "4fda7b64-df7f-46bc-b0e5-ca0abf97b90f",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -464,7 +464,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -473,13 +473,13 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/hosts?imei=358942053333382",
+					"raw": "https://devapi.connectedio.com/api/v4/hosts?imei=358942053333382",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -516,7 +516,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "c532eda0-8b95-4ea2-b422-7306006f3a4d",
+						"id": "388467ab-cd8b-4d1c-9568-f365ac7a654d",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -535,7 +535,7 @@
 					{
 						"key": "X-API-KEY",
 						"type": "text",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b"
 					}
 				],
 				"body": {
@@ -543,13 +543,13 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/hosts/realtime?imei=356961071557824",
+					"raw": "https://devapi.connectedio.com/api/v4/hosts/realtime?imei=358148061143454",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -574,7 +574,7 @@
 						},
 						{
 							"key": "imei",
-							"value": "356961071557824"
+							"value": "358148061143454"
 						}
 					]
 				}
@@ -587,7 +587,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "a9ed18e0-0d71-445d-a236-5075f4b8ed5d",
+						"id": "d2627eea-9092-4261-a3bd-9812239901a1",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(201);",
@@ -602,7 +602,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -633,13 +633,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/add",
+					"raw": "https://devapi.connectedio.com/api/v4/groups/add",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -656,7 +656,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "1b3cb662-9fc7-44e5-80a4-2cd3979ec923",
+						"id": "7ca1b2c2-78ff-43b2-baa8-368ea280b161",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -674,7 +674,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -683,13 +683,13 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups",
+					"raw": "https://devapi.connectedio.com/api/v4/groups",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -727,7 +727,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d7383817-1455-42c9-8df8-c093c446b843",
+						"id": "1d874d2d-da7e-4f8e-995f-ddf8a7305513",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -742,7 +742,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -767,19 +767,19 @@
 						},
 						{
 							"key": "refId",
-							"value": "367",
+							"value": "114",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/update",
+					"raw": "https://devapi.connectedio.com/api/v4/groups/update",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -796,7 +796,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "3dcdc2a6-61c0-47aa-811d-8e5d41c18c9b",
+						"id": "e92b3c24-c065-4fcf-b932-fae00abf2a0d",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -811,7 +811,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -820,24 +820,24 @@
 					"formdata": [
 						{
 							"key": "refId",
-							"value": "367",
+							"value": "349",
 							"type": "text"
 						},
 						{
 							"key": "imeiList",
-							"value": "{\"device\":[{\"imei\":\"358148061143298\"},{\"imei\":\"358148061143454\"}]}",
+							"value": "{\"device\":[{\"imei\":\"358148061143454\"}]}",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/add/device",
+					"raw": "https://devapi.connectedio.com/api/v4/groups/add/device",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -855,7 +855,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "22445266-48db-45bd-a0cb-0ae23ef47c8d",
+						"id": "c841c3e2-b2e5-45ec-9e59-662dbb139faf",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -873,7 +873,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -882,19 +882,19 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/details/367",
+					"raw": "https://devapi.connectedio.com/api/v4/groups/details/114",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"groups",
 						"details",
-						"367"
+						"114"
 					]
 				}
 			},
@@ -906,7 +906,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "8fb4ca34-d867-492c-b788-2b6fd0802c16",
+						"id": "ba559383-c566-499e-b5a4-28628ae71c81",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -921,7 +921,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -930,24 +930,24 @@
 					"urlencoded": [
 						{
 							"key": "refId",
-							"value": "367",
+							"value": "349",
 							"type": "text"
 						},
 						{
 							"key": "imeiList",
-							"value": "{\"device\":[{\"imei\":\"358148061143298\"},{\"imei\":\"358148061143454\"}]}",
+							"value": "{\"device\":[{\"imei\":\"358148061143454\"}]}",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/remove/device",
+					"raw": "https://devapi.connectedio.com/api/v4/groups/remove/device",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -965,7 +965,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4f3f9b48-fc0a-45e3-ad2d-c547b1e71ca6",
+						"id": "43b9018f-6ac7-4f9c-9cc2-05badbcf0473",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -980,7 +980,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -989,19 +989,19 @@
 					"urlencoded": [
 						{
 							"key": "refId",
-							"value": "366",
+							"value": "153",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/groups/remove",
+					"raw": "https://devapi.connectedio.com/api/v4/groups/remove",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1018,7 +1018,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "f5bd110d-dc25-40ec-8de8-f91e515090a5",
+						"id": "c102f013-dd36-46ac-b649-7806487885ec",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1033,18 +1033,18 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device",
+					"raw": "https://devapi.connectedio.com/api/v4/device",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1077,7 +1077,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "4ac2db2b-155e-4803-9543-be365bcb95a3",
+						"id": "51c8dda4-35f7-43c5-b4af-2ddb91bb1df8",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1095,7 +1095,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -1104,13 +1104,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/details/359852051242486",
+					"raw": "https://devapi.connectedio.com/api/v4/device/details/359852051242486",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1128,7 +1128,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ece708c9-5461-4521-92ac-7be569046f4b",
+						"id": "fde3b090-d6ac-40fe-9992-d31a15c8f039",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1147,7 +1147,7 @@
 					{
 						"key": "X-API-KEY",
 						"type": "text",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b"
 					}
 				],
 				"body": {
@@ -1155,20 +1155,20 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/realtime/details/356961071557824",
+					"raw": "https://devapi.connectedio.com/api/v4/device/realtime/details/358148061143454",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"device",
 						"realtime",
 						"details",
-						"356961071557824"
+						"358148061143454"
 					]
 				}
 			},
@@ -1180,7 +1180,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6b41a43d-a8cf-408b-8476-59843024e54f",
+						"id": "a4962922-f4ba-45e4-a239-ea97f308e9fa",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1199,7 +1199,7 @@
 					{
 						"key": "X-API-KEY",
 						"type": "text",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b"
 					}
 				],
 				"body": {
@@ -1207,20 +1207,20 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/realtime/system-log/356961071557824",
+					"raw": "https://devapi.connectedio.com/api/v4/device/realtime/system-log/358148061143454",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"device",
 						"realtime",
 						"system-log",
-						"356961071557824"
+						"358148061143454"
 					]
 				}
 			},
@@ -1232,7 +1232,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "ac1f5472-cb19-4e51-9892-1b815b15e0a8",
+						"id": "385cf785-b10d-4446-9112-0e2229686fe3",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1251,7 +1251,7 @@
 					{
 						"key": "X-API-KEY",
 						"type": "text",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a"
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b"
 					}
 				],
 				"body": {
@@ -1259,20 +1259,20 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/realtime/kernel-log/356961071557824",
+					"raw": "https://devapi.connectedio.com/api/v4/device/realtime/kernel-log/358148061143454",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"device",
 						"realtime",
 						"kernel-log",
-						"356961071557824"
+						"358148061143454"
 					]
 				}
 			},
@@ -1284,7 +1284,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "d4916d43-d5a1-4301-a691-cd7eca2a762a",
+						"id": "7878251d-b740-4618-a5b9-cd7a94035467",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1302,7 +1302,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -1311,13 +1311,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/status",
+					"raw": "https://devapi.connectedio.com/api/v4/device/status",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1334,7 +1334,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "6b8ae4fe-935e-4097-a025-b391a7724d10",
+						"id": "9c900e0f-4816-4304-a056-c7b70d7916ee",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(201);",
@@ -1349,7 +1349,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					},
 					{
@@ -1386,13 +1386,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/add",
+					"raw": "https://devapi.connectedio.com/api/v4/device/add",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1409,7 +1409,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "eb26cfb8-2de3-49cd-9a60-96002ad507bd",
+						"id": "c7032066-b341-4bbe-8c77-a42ad97dfa24",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1424,18 +1424,18 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/data-usage?type=MONTH&timeZone=Asia/Kolkata&page=1",
+					"raw": "https://devapi.connectedio.com/api/v4/data-usage?type=MONTH&timeZone=Asia/Kolkata&page=1",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1475,7 +1475,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "7368fa6a-97f0-4220-ad18-e91787fffa2e",
+						"id": "7d6e6f9f-37b6-412c-ba5d-c8b8fa152058",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1490,7 +1490,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -1499,7 +1499,7 @@
 					"urlencoded": [
 						{
 							"key": "imei",
-							"value": "358148061732066",
+							"value": "358148061143454",
 							"type": "text"
 						},
 						{
@@ -1540,13 +1540,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/update",
+					"raw": "https://devapi.connectedio.com/api/v4/device/update",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1563,7 +1563,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "647e2ea4-4259-4d68-ae91-0e7ec6981ee3",
+						"id": "93ece114-420e-459d-a005-03943c7d7a86",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1578,7 +1578,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -1593,13 +1593,13 @@
 					]
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/remove",
+					"raw": "https://devapi.connectedio.com/api/v4/device/remove",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
@@ -1616,7 +1616,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "efe3eccb-6cca-432f-8495-560c75364960",
+						"id": "110ba718-1c43-405c-8085-064f00154857",
 						"exec": [
 							"pm.test(\"Status test\", function () {",
 							"   pm.expect(pm.response.code).to.equal(200);",
@@ -1634,7 +1634,7 @@
 				"header": [
 					{
 						"key": "X-API-KEY",
-						"value": "9c6124e1c72d2ace5d08b70a3a61164a",
+						"value": "9f8a2e23a03cf7ba5afe46829e30340b",
 						"type": "text"
 					}
 				],
@@ -1643,20 +1643,20 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "stage.connectedio.com:81/api/v4/device/realtime/reboot/356961071557824",
+					"raw": "https://devapi.connectedio.com/api/v4/device/realtime/reboot/358148061143454",
+					"protocol": "https",
 					"host": [
-						"stage",
+						"devapi",
 						"connectedio",
 						"com"
 					],
-					"port": "81",
 					"path": [
 						"api",
 						"v4",
 						"device",
 						"realtime",
 						"reboot",
-						"356961071557824"
+						"358148061143454"
 					]
 				}
 			},
@@ -1667,7 +1667,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "20bb6671-8098-49fe-83f1-eea9c4ae7fa6",
+				"id": "fbed1d15-f459-4135-814e-cbb75925fe43",
 				"type": "text/javascript",
 				"exec": [
 					"var randomInt = Math.floor((Math.random() * 1000))",
@@ -1682,7 +1682,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "e82dd89d-059d-4950-9111-d88df179508c",
+				"id": "731c8162-874c-4674-a333-0c35b93df2f8",
 				"type": "text/javascript",
 				"exec": [
 					""
