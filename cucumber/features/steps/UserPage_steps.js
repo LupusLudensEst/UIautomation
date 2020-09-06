@@ -24,86 +24,93 @@ const LOCATORS = {
 };
 
 When("Filled out all fields and choosen drop-down menues", async function () {
-// 0. userMenu.click();
+// 1. userMenu.click();
   await this.chechDisplayed(LOCATORS.USERS, "click");
 
-// 1. quickActionButton.click();
+// 2. quickActionButton.click();
   await this.chechDisplayed(LOCATORS.QUICK_ACTIONS, "click");
 
-// 2. addMenu.click();
+// 3. addMenu.click();
   await this.chechDisplayed(LOCATORS.ADD_MENU, "click");
 
-// 3. firstNameField.sendKeys("Roman");
+// 4. firstNameField.sendKeys("Roman");
 const setFirstname = async (driver, Firstname = FIRSTNAME) => {
   await driver
     .wait(until.elementLocated(LOCATORS.FIRST_NAME), EXPLICIT_TIMEOUT)
     .sendKeys("Roman");
 };
 
-// 4. lastName.sendKeys("Ivanov");
+// 5. lastName.sendKeys("Ivanov");
 const setLastname = async (driver, Lastname = LASTNAME) => {
   await driver
     .wait(until.elementLocated(LOCATORS.LAST_NAME), EXPLICIT_TIMEOUT)
     .sendKeys("Ivanov");
 };
 
-// 5. emailField.sendKeys("vikauser3@mailinator.com");
+// 6. emailField.sendKeys("vikauser3@mailinator.com");
 const setEmail = async (driver, Email = EMAIL) => {
   await driver
     .wait(until.elementLocated(LOCATORS.EMAIL), EXPLICIT_TIMEOUT)
     .sendKeys("vikauser3@mailinator.com");
 };
 
-// 6. telephoneField.sendKeys("7895678956");
+// 7. telephoneField.sendKeys("7895678956");
 const setTelephone = async (driver, Telephone = TELEPHONE) => {
   await driver
     .wait(until.elementLocated(LOCATORS.TELEPHONE), EXPLICIT_TIMEOUT)
     .sendKeys("7895678956");
  };
 
-// 7. selectRole.selectByVisibleText("user");
+// 8. selectRole.selectByVisibleText("user");
 const setRole = async (driver, Role = ROLE) => {
   await driver
     .wait(until.elementLocated(LOCATORS.SELECT_ROLE), EXPLICIT_TIMEOUT)
     .sendKeys("admin");
 };
 
-// 8. addressLine1Field.sendKeys("1933, 84 street");
+// 9. addressLine1Field.sendKeys("1933, 84 street");
 const setAddress1 = async (driver, Address1  = ADDRESS_1) => {
   await driver
     .wait(until.elementLocated(LOCATORS.ADDRESS_1), EXPLICIT_TIMEOUT)
     .sendKeys("1933, 84 street");
 };
 
-// 9. cityField.sendKeys("Brooklyn");
+// 10. addressLine2Field.sendKeys("Just test");
 const setAddress2 = async (driver, Address2  = ADDRESS_2) => {
   await driver
     .wait(until.elementLocated(LOCATORS.ADDRESS_2), EXPLICIT_TIMEOUT)
+    .sendKeys("Just test");
+  };
+
+// 11. cityField.sendKeys("Brooklyn");
+const setCity = async (driver, City  = CITY) => {
+  await driver
+    .wait(until.elementLocated(LOCATORS.CITY), EXPLICIT_TIMEOUT)
     .sendKeys("Brooklyn");
   };
 
-// 10. zipField.sendKeys("11214");
+// 12. zipField.sendKeys("11214");
 const setZip = async (driver, Zip  = Zip) => {
   await driver
       .wait(until.elementLocated(LOCATORS.ZIP_CODE), EXPLICIT_TIMEOUT)
       .sendKeys("11214");
   };
 
-// 11. countryMenu.selectByVisibleText("United States");
+// 13. countryMenu.selectByVisibleText("United States");
 const setCountry = async (driver, Country  = COUNTRY) => {
   await driver
       .wait(until.elementLocated(LOCATORS.COUNTRY), EXPLICIT_TIMEOUT)
       .sendKeys("United States");
 };
 
-// 12. stateMenu.selectByVisibleText("New York");
+// 14. stateMenu.selectByVisibleText("New York");
 const setState = async (driver, State  = STATE) => {
   await driver
       .wait(until.elementLocated(LOCATORS.STATE), EXPLICIT_TIMEOUT)
       .sendKeys("New York");
 };
 
-// 13. addButton.click();
+// 15. addButton.click();
   await this.chechDisplayed(LOCATORS.ADD_BTN, "click");
 });
 
