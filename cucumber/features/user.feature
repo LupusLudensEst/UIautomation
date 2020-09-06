@@ -9,7 +9,7 @@ Feature: Add User
 
     Scenario: Add User
         When Filled out all fields and choosen drop-down menues
-#        Then Verify User was added
+        Then Verify User was added
 
 
 

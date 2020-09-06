@@ -105,10 +105,11 @@ const setState = async (driver, State  = STATE) => {
 
 // 13. addButton.click();
   await this.chechDisplayed(LOCATORS.ADD_BTN, "click");
-
 });
 
-// Then("Verify User was added", async function () {
-//   await this.chechDisplayed(LOCATORS.USERS_VERIFY).getText();
-//
-// });
+Then("Verify User was added", async function () {
+  await this.chechDisplayed(LOCATORS.USERS_VERIFY);
+// const  text = "Roman"
+// const  bodyText = driver.findElements(LOCATORS.USERS_VERIFY).getText();
+// Assert.assertTrue("Text not found!", bodyText.contains("Roman"));
+});

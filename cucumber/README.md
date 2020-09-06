@@ -57,5 +57,17 @@ that means that you write down what's supposed to happen in a real language. All
 Cucumber tutorial: 
 https://cucumber.io/docs/guides/10-minute-tutorial/
 
+#
+https://github.com/connectedioinc/UIautomation
+#
+https://cio.testrail.io/index.php?/suites/view/2&group_by=cases:section_id&group_order=asc&group_id=253
+https://cio.testrail.io/index.php?/suites/view/10&group_by=cases:section_id&group_order=asc&group_id=1110
+#
+qatest@gmail.com
+#
+qatest123
+#
+git push -u origin vyacheslav
+
 
 
